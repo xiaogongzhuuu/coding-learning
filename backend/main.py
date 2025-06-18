@@ -1,4 +1,5 @@
 from transformers import pipeline
 model=pipeline("sentiment-analysis")
-result=model("i hate you!")
+a=input()
+result=model(a)
 print(result)
