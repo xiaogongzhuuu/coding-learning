@@ -1,0 +1,26 @@
+/*标签名称选择器*/
+body {
+    background-color: azure;
+}
+
+/*id选择器*/
+#title-1 {
+    text-decoration: line-through;
+}
+
+/*class 选择器*/
+.title {
+    background-color: #595656
+}
+
+.content {
+    margin-bottom: 10px;
+    border: 3px solid red;
+    font-size: 24px;
+    color: #ff0000
+}
+
+.content1 {
+    color: #111010;
+    text-decoration: underline
+}
