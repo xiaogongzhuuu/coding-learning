@@ -1,5 +1,5 @@
-from transformers import pipeline
-model=pipeline("sentiment-analysis")
-a=input()
-result=model(a)
-print(result)
+from fastapi import FastAPI
+app=FastAPI()
+@app.get("/")
+def index():
+    return "hello fastapi"
