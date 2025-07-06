@@ -6,9 +6,6 @@ from fastapi.staticfiles import StaticFiles
 
 app=FastAPI()
 
-@app.get("/")
-def index():
-    return FileResponse("frontend/index.html")
 
 @app.get("/member")
 def member():
@@ -40,6 +37,6 @@ def square(number:Annotated[int,None]):
     return{"result":number*number}
 
 
-app.mount("/static",StaticFiles(directory="frontend",html=True))
+app.mount("/",StaticFiles(directory="frontend",html=True))
 
 
