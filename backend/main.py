@@ -31,7 +31,7 @@ def multiply(
 def getname(name):
     return {"hello" + name}
 
-@app.get("/square/{number}")
+@app.get("/square")
 def square(number:Annotated[int,None]):
     number=int(number)
     return{"result":number*number}

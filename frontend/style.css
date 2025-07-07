@@ -1,6 +1,6 @@
 /*标签名称选择器*/
 body {
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
 }
 
 /*id选择器*/
@@ -10,7 +10,7 @@ body {
 
 /*class 选择器*/
 .title {
-    background-color: #595656
+    background-color: #ffffff
 }
 
 .content {
@@ -21,6 +21,6 @@ body {
 }
 
 .content1 {
-    color: #111010;
+    color: #faf6f6;
     text-decoration: underline
 }
