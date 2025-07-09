@@ -37,6 +37,14 @@ def square(number:Annotated[int,None]):
     return{"result":number*number}
 
 
+@app.get("/test")
+def gettest():
+    return {"get":True}
+
+@app.post("/test")
+def posttest():
+    return {"post":True}
+
 app.mount("/",StaticFiles(directory="frontend",html=True))
 
 
