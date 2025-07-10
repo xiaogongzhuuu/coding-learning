@@ -19,7 +19,7 @@ def hello(name):
 
 #/multiply?n1=1&n2=2
 @app.get("/multiply")
-def multiply(
+def multiply( 
     n1:Annotated[int,None],
     n2:Annotated[int,None]
 ):
@@ -45,6 +45,9 @@ def gettest():
 def posttest():
     return {"post":True}
 
-app.mount("/",StaticFiles(directory="frontend",html=True))
+# app.mount("/",StaticFiles(directory="frontend",html=True))
+@app.get("/")
+def home():
+    return FileResponse("frontend/index.html")
 
 

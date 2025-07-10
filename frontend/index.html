@@ -56,29 +56,22 @@
             <button type="button" onclick="fetchGet()">
                 get连线
             </button>
+            <button type="button" onclick="fetchPost()">
+                post连线
+            </button>
             <script>
             
                 async function fetchGet() {
-                    const response = await fetch('/test');
-                    const data = await response.json();
+                    let response = await fetch("/test", { method: "GET" });
+                    let data = await response.json();
                     console.log(data);
                 }
 
                 async function fetchPost() {
-                    const response = await fetch('/test', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ message: 'Hello, World!' })
-                    });
-                    const data = await response.json();
+                    let response = await fetch('/test', { method: 'POST'});
+                    let data = await response.json();
                     console.log(data);
                 }
-
-                // 调用函数以测试
-                fetchGet();
-                fetchPost();
             </script>
     </body>
 
