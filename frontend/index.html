@@ -62,13 +62,24 @@
             <script>
             
                 async function fetchGet() {
-                    let response = await fetch("/test", { method: "GET" });
+                    let response = await fetch("/test",
+
+                    { method: "GET" }
+
+                );
                     let data = await response.json();
                     console.log(data);
                 }
 
                 async function fetchPost() {
-                    let response = await fetch('/test', { method: 'POST'});
+                    let response = await fetch('/test', 
+
+                    { 
+                        method: 'POST',
+                        body:"post请求"
+                    }
+
+                );
                     let data = await response.json();
                     console.log(data);
                 }
