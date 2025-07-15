@@ -1,4 +1,12 @@
+import mysql.connector
+
+
+
+
+
+
 #uvicorn backend.main:app
+
 from typing import Annotated
 from fastapi import FastAPI,Path,Query,Body
 from fastapi.responses import RedirectResponse , FileResponse
