@@ -1,4 +1,11 @@
 import mysql.connector
+con=mysql.connector.connect(
+    user="root",
+    password="aA123ZXCVBNM",
+    host="sydeMacBook-Air.local",
+    database="fastapi"
+)
+print("database ready")
 
 
 
@@ -10,9 +17,24 @@ import mysql.connector
 from typing import Annotated
 from fastapi import FastAPI,Path,Query,Body
 from fastapi.responses import RedirectResponse , FileResponse
-from fastapi.staticfiles import StaticFiles
+#from fastapi.staticfiles import StaticFiles
 
 app=FastAPI()
+
+@app.get("/createMessage")
+def createmessage(
+    author:Annotated[str,None],
+    content:Annotated[str,None]
+):
+    
+    cursor=con.cursor()
+    cursor.execute()
+
+
+
+
+
+
 
 
 @app.get("/member")
@@ -58,6 +80,11 @@ def gettest():
 def posttest(body=Body(None)):
     print(body)
     return {"post":True}
+
+
+
+
+
 
 
 
