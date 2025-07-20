@@ -19,7 +19,7 @@ update product set price=50 where name="奶茶";
 update product set name="果茶",price=25 where name="奶茶";
 update product set price=30 where price <= 35;
 
-delete from product where name="果茶";
+delete from product where id=6 or id=7 or id=8;
 
 
 drop table product;
